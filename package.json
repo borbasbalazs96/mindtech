@@ -1,0 +1,32 @@
+{
+  "name": "mindtech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts",
+    "createdb":"ts-node ./node_modules/typeorm/cli.js migration:generate -n CreateDatabase",
+    "migrationup":"ts-node ./node_modules/typeorm/cli.js migration:run",
+    "add_random": "ts-node src/create_random_datas/add_random_datas.ts",
+    "add_random_2": "ts-node src/create_random_datas/add_random_datas_album.ts",
+    "add_random_3": "ts-node src/create_random_datas/add_random_datas_track.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.34"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/faker": "^5.5.6",
+    "Faker": "^0.7.2",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}

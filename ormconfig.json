@@ -1,0 +1,18 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "database": "mindtech_feladat",
+    "synchronize": true,
+    "username": "root",
+    "password": "",
+    "logging": false,
+    "entities": [
+      "src/tables/*.ts"
+    ],
+    "migrations": [
+      "src/migrations/*.ts"
+    ],
+    "cli": {
+      "entitiesDir": "src/tables"
+    }
+  }
